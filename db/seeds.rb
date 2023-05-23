@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+require 'faker'
+
+20.times do
+  Character.create(
+    description: Faker::tweet::tweets.character,
+    user_name: Faker::usuario::tweets.character
+    
+  )
+end
